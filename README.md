@@ -1,18 +1,34 @@
 # 小满·见微
 
-《小满·见微》互动长卷网页项目仓库。
+《小满·见微》互动长卷网页项目。
 
-## 当前状态
+## 项目状态
 
-仓库已由项目所有者创建。此处作为正式项目仓库；之前临时放在 `my-portfolio/xiaoman-jianwei` 的占位目录已撤回。
+- 正式仓库：`engenia626/project`
+- 当前目标版本：V29.1（飞行阶段固定使用 `assets/action_3.png`，不轮播飞行帧）
+- 飞行期间不播放行走脚步音效。
+- **完整网站文件尚未上传，GitHub Pages 尚未上线。**
 
-**注意：当前仓库还没有上传 V29.1 完整网站文件，尚未部署 GitHub Pages。**
+## 部署结构
 
-## 目标版本约定
+将 V29.1 工程包解压后，把网站根目录中的全部文件上传到仓库根目录，必须包含：
+- `index.html`
+- `app.js`、`style.css`
+- 完整的 `assets/` 资源目录
+- `.github/workflows/pages.yml`
+- `.nojekyll`
 
-- 荷塘飞行固定使用 `assets/action_3.png`，不使用飞行帧轮播。
+不要只上传 ZIP 文件；GitHub Pages 需要实际的网站文件和资源目录。
+
+## GitHub Pages
+
+仓库设置中选择 **Settings → Pages → Build and deployment → Source: GitHub Actions**。上传完整网站后，`Deploy Xiaoman to GitHub Pages` 工作流会在推送到 `main` 时自动部署。
+
+预期网址：`https://engenia626.github.io/project/`
+
+## 版本约定
+
+- 荷塘上空飞行固定使用 `assets/action_3.png`，不增加飞行帧轮播。
 - 保留原有走路、快走和跳跃动作。
 - 移除行走触发的脚步音效。
-- 保留原有长卷背景、前后景、任务和环境音。
-
-上传正式工程时，需将 V29.1 网站根目录全部文件放在仓库根目录，确保 `index.html` 位于根目录，并保留完整 `assets/` 与 `.github/workflows/pages.yml`。
+- 后续更新只修改本仓库，不再放入个人作品集仓库。
