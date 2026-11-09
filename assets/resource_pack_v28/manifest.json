@@ -1,0 +1,182 @@
+[
+  {
+    "file": "flowering_trees/flowering_tree_left.png",
+    "label": "左侧大树",
+    "size_px": [
+      637,
+      968
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "flowering_trees/flowering_tree_center.png",
+    "label": "中央冠形大树",
+    "size_px": [
+      1084,
+      755
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "flowering_trees/flowering_branch_corner.png",
+    "label": "右上横向花枝",
+    "size_px": [
+      864,
+      382
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "willows/willow_full_tree_lotus.png",
+    "label": "荷塘垂柳",
+    "size_px": [
+      688,
+      451
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "willows/willow_full_tree_bank.png",
+    "label": "岸边垂柳",
+    "size_px": [
+      539,
+      436
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "willows/willow_double_tree.png",
+    "label": "双株垂柳",
+    "size_px": [
+      524,
+      336
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "willows/willow_overhanging_branch.png",
+    "label": "横向垂柳枝",
+    "size_px": [
+      527,
+      305
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "willows/willow_side_branch.png",
+    "label": "侧向垂柳枝",
+    "size_px": [
+      287,
+      346
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "seam_cover/rock_shrub_bank.png",
+    "label": "苔石与花草横向遮挡",
+    "size_px": [
+      1448,
+      356
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "seam_cover/mixed_rock_grass_bank.png",
+    "label": "石块草带接缝遮挡",
+    "size_px": [
+      791,
+      435
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "seam_cover/flowering_shrub_bank.png",
+    "label": "花灌木前景",
+    "size_px": [
+      663,
+      487
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "seam_cover/wheat_grass_bank.png",
+    "label": "麦穗草带前景",
+    "size_px": [
+      1297,
+      255
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "weather/01_soft_wind_ribbons.png",
+    "label": "01_soft_wind_ribbons",
+    "size_px": [
+      2022,
+      789
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "weather/02_fine_diagonal_rain.png",
+    "label": "02_fine_diagonal_rain",
+    "size_px": [
+      2200,
+      1156
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "weather/06_scattered_falling_petals.png",
+    "label": "06_scattered_falling_petals",
+    "size_px": [
+      2054,
+      926
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "weather/08_low_ground_mist.png",
+    "label": "08_low_ground_mist",
+    "size_px": [
+      2166,
+      372
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "weather/07_subtle_water_splashes.png",
+    "label": "07_subtle_water_splashes",
+    "size_px": [
+      1744,
+      417
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "weather/05_drifting_autumn_leaves.png",
+    "label": "05_drifting_autumn_leaves",
+    "size_px": [
+      2023,
+      912
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "weather/04_quiet_water_ripples.png",
+    "label": "04_quiet_water_ripples",
+    "size_px": [
+      1851,
+      421
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "file": "weather/03_distant_rain_veil.png",
+    "label": "03_distant_rain_veil",
+    "size_px": [
+      2298,
+      633
+    ],
+    "mode": "RGBA"
+  }
+]

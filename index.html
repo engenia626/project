@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小满·见微｜听夏漫游</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body><div id="game" class="game">
+<div class="scenery" id="scenery" aria-label="初夏中式田园长卷">
+ <div class="sky-halo"></div><canvas id="panoramaCanvas" aria-label="连续乡间长卷背景"></canvas><div class="farback far-a" id="farA"></div><div class="farback far-b" id="farB"></div><div class="farback far-c" id="farC"></div>
+ <div class="mist mist-a"></div><div class="mist mist-b"></div><div class="sunlight"></div>
+ <div class="waterline" id="waterline"><div class="ripple-lines"></div></div>
+ <div id="sceneStrip" class="scene-strip"></div><div id="foregroundBehind" class="foreground-layer layer-behind" aria-hidden="true"></div>
+ <div class="player-zone" id="playerZone"><div class="player-shadow"></div><img id="playerSprite" alt="小满正在游历" draggable="false" src="assets/walk_0.png"></div>
+ <div id="foregroundFront" class="foreground-layer layer-front" aria-hidden="true"></div>
+ <div id="floating" class="floating-particles"></div><div class="foreground-haze"></div><div class="grain"></div>
+</div>
+<header class="topbar">
+ <div class="brand"><span class="seal">小满</span><div><strong>小满 · 见微</strong><small>村桥荷岸 · 一路听风</small></div></div>
+ <div class="header-right"><span class="vistas-count" id="vistasCount">第 01 / 10 景</span><button class="circle-btn" id="journalBtn" title="观物手记">手记 <b id="progressCount">0/3</b></button><button class="circle-btn" id="soundBtn" title="开启或关闭配乐">♫ 音乐关</button></div>
+</header>
+<div class="side-pips" id="vistasPips" aria-label="景点导航"></div>
+<div class="narrative" id="narrative"><div class="eyebrow" id="narrativeEyebrow">初夏行旅 · 序</div><h1 id="narrativeTitle">风从村口来</h1><p id="narrativeDesc">晨光还薄，田埂上的草叶已经醒了。小满举起放大镜，沿着乡间小路出发。</p><div class="narrative-actions"><button class="primary" id="interactBtn">继续向前 <span>↗</span></button><span id="taskStatus">前方还有风景</span></div></div>
+<div class="right-title" id="rightTitle">村口晨烟 <span>初夏 · 壹</span></div>
+<div class="bottom-bar"><div class="control-tip">A / D 或 ← → 漫步　·　Shift 快行　·　空格轻跃（荷塘段飞行）　·　E 观察</div><div class="walk-track"><button id="backBtn" title="上一处风景">‹</button><div class="track-group"><span>沿途长卷</span><div class="track"><div class="track-fill" id="trackFill"></div></div></div><button id="forwardBtn" title="下一处风景">›</button></div><div class="bottom-actions"><button id="autoBtn">▷ 自动漫游</button><button id="skipBtn">跳过任务</button><button id="endingBtn" title="结束页">观赏小满</button></div></div>
+<div class="volume-control" id="volumeBox" hidden><span>音乐音量</span><input id="volume" type="range" min="0" max="100" value="48" aria-label="音乐音量"></div>
+<div class="toast" id="toast"></div>
+<div class="overlay open" id="intro"><section class="intro-card"><div class="intro-kicker">廿四节气 · 小满</div><h2>小满 · 见微</h2><p>沿你亲手拼成的田园长卷，缓缓走过村舍、石桥、荷塘与麦浪。<br>不必赶路，风和花都有自己的步调。</p><img src="assets/flower_intro.png" alt="初夏花草插画" id="introFlower"><div class="intro-actions"><button class="primary" id="startBtn">入画，开始漫游 →</button><button class="text-button" id="introSkip">跳过序章</button></div><small>使用你拼接的长卷 · 2D小满逐帧漫游 · 原创音乐</small></section></div>
+<div class="overlay" id="activity" aria-hidden="true"><section class="activity-card"><button class="close-btn" id="closeActivity" title="关闭">×</button><div class="eyebrow" id="activityEyebrow"></div><h2 id="activityTitle"></h2><p id="activityDesc"></p><div id="activityGame" class="activity-game"></div><div class="activity-bottom"><span id="activityHint"></span><button id="activitySkip">跳过此观察</button></div></section></div>
+<div class="overlay" id="journal" aria-hidden="true"><section class="journal-card"><button class="close-btn" id="closeJournal">×</button><div class="eyebrow">观 物 手 记</div><h2>风与草木的记录</h2><div id="journalCards" class="journal-cards"></div><p class="journal-note">一路见微，颜色也会慢慢回到小满身上。</p><button class="primary" id="journalContinue">回到田园 →</button></section></div>
+<div class="overlay" id="ending" aria-hidden="true"><section class="ending-card"><button class="close-btn" id="closeEnding">×</button><div class="ending-copy"><span class="eyebrow">游 历 的 尾 声</span><h2>小满未满，恰是好时节</h2><p>一路走过十处风景，荷叶的水珠、蜻蜓的短暂停驻、麦粒渐渐灌浆，都成为这件盲盒里的细小风景。</p><p>此处呈现带底座的完整3D小满。拖动右侧模型可以旋转观察。</p><button class="primary" id="returnBtn">再去田野走走 ↗</button></div><div class="ending-model"><canvas id="endingCanvas" aria-label="带底座的完整小满3D模型"></canvas><div id="endingStatus">正在加载完整小满...</div></div></section></div>
+</div><audio id="music" loop preload="auto" src="assets/summer_original.ogg"></audio>
+<script src="app.js" defer></script><script type="module" src="ending.js"></script>
+</body></html>
